@@ -5,6 +5,7 @@
       <beers-list :beers="beers"></beers-list>
       <beer-detail :beer="selectedBeer"></beer-detail>
       <button v-on:click="addFavouriteBeer(selectedBeer)">Add Favourite Beer</button>
+      <button v-on:click="removebeer(index)">Remove Beer</button>
       <favourite-beers :favouriteBeers="favouriteBeers"></favourite-beers>
       
 
@@ -51,15 +52,25 @@ export default {
       this.favouriteBeers.push(this.selectedBeer)
     }
   }
-  }
+  },
+    removeBeer: function (index) {
+    this.favouriteBeers.$splice(index, 1);
+    }
 } 
 
 </script>
 
 <style>
-body{
+.main-container{
   background-color: lightblue;
-  
+
 }
+
+img{
+  height:300px;
+}
+
+  
+
 
 </style>
