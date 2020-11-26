@@ -24,16 +24,10 @@ export default {
 </script>
 
 <style>
-/* .beer-detail{
-        padding:10px;
-    
-    
-    border-radius: 10px;
-    
-    position: fixed;
-    top:150px;
-    left: 50%;
-} */
+.beer-detail{
+    width:50%;
+
+}
 
 
 </style>

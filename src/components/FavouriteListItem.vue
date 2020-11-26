@@ -14,5 +14,7 @@ export default {
 </script>
 
 <style>
-
+.favourite-beers{
+    width:200px;
+}
 </style>
