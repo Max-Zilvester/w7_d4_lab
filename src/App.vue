@@ -4,7 +4,7 @@
     <div class='main-container'>
       <beers-list :beers="beers"></beers-list>
       <beer-detail :beer="selectedBeer"></beer-detail>
-      <button v-on:click="addFavouriteBeer(selectedBeer, selectedIngredient)">Add Favourite Beer</button>
+      <button v-on:click="addFavouriteBeer(selectedBeer)">Add Favourite Beer</button>
       <favourite-beers :favouriteBeers="favouriteBeers"></favourite-beers>
       
 
@@ -25,7 +25,8 @@ export default {
     return{
       beers: [],
       selectedBeer: null,
-      favouriteBeers: []
+      favouriteBeers: [],
+      ingredients:[]
     }
   },
 
