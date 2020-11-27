@@ -7,6 +7,7 @@
         <p>Description: {{beer.description}}</p>
         
         <beer-ingredients :beerIngredients="beerIngredients"></beer-ingredients>
+        <p>{{ beer.ingredients.malt[0, 1] }}</p>
     </div>
 
 </template>

@@ -3,10 +3,11 @@
     <h1>Brewdog App</h1>
     <div class='main-container'>
       <beers-list :beers="beers"></beers-list>
-      <beer-detail :beer="selectedBeer"></beer-detail>
+      <beer-detail :beer="selectedBeer"></beer-detail> <br>
       <button v-on:click="addFavouriteBeer(selectedBeer)">Add Favourite Beer</button>
-      <button v-on:click="removeBeer(index)">Remove Beer</button>
+      
       <favourite-beers :favouriteBeers="favouriteBeers"></favourite-beers>
+      <button v-on:click="removeBeer(index)">Remove Beer</button>
       
 
     </div>
@@ -51,13 +52,11 @@ export default {
       if (this.favouriteBeers.includes(selectedBeer) === false) {
       this.favouriteBeers.push(this.selectedBeer)
     }
-  }
   },
-    removeBeer: function (favouriteBeer) {
-      this.favouriteBeers.splice(this.favouriteBeer);
+    removeBeer: function (index) {
+      this.favouriteBeers.splice(index, 1);
     }
-    
-    
+  }  
 
 } 
 
